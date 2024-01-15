@@ -1,0 +1,47 @@
+PostgreSQL (pronounced as post-gress-Q-L) is an open source relational database
+management system (DBMS) developed by a worldwide team of volunteers.
+PostgreSQL is not controlled by any corporation or other private entity
+and the source code is available free of charge.
+
+Create a database
+To create a database in PostgreSQL, you use the CREATE DATABASE statement.
+The following statement creates a new database named bookstore in the PostgreSQL database server.
+
+CREATE DATABASE bookstore;
+
+Create a table in PostgreSQL
+See list of data types => https://www.postgresql.org/docs/current/datatype.html
+
+CREATE TABLE books
+(
+    book_id UUID PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    isbn CHAR(13) NOT NULL,
+    author VARCHAR NOT NULL,
+    publisher VARCHAR NOT NULL,
+    price NUMERIC(15,2) NOT NULL
+);
+
+Insert data into a table in PostgreSQL
+INSERT INTO books(book_id, title, isbn, author, publisher, price)
+VALUES
+    (
+        'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11',
+        'Learning Python',
+        '9781449355739',
+        'Mark Lutz',
+        "O'Reilly Media",
+        49.95
+    );
+
+Query data from a table in PostgreSQL
+SELECT * FROM books;
+SELECT title, author, price FROM books;
+
+Query and filter with WHERE
+
+
+Update data in a table in PostgreSQL
+UPDATE books
+SET price = 54.95
+WHERE book_id = 'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11';

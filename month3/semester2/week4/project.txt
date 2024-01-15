@@ -1,0 +1,8 @@
+Create an end-to-end real world project using all the concepts taught in this course. 
+This project covers the following concepts:
+
+1. The project should have atleast 10 endpoints
+2. The project should connect to and use a database
+3. The project should have authentication built in
+4. The project should be production ready and use proper typing, input validation, 
+   logging, as well as security prevention built in place
